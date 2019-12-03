@@ -9,8 +9,10 @@ int main()
     const int MAX = 100, MIN = 1;
     srand(time(NULL));
     nombreMystere = (rand() % (MAX - MIN + 1)) - 1;
+    int compteur = 1;
     do
     {
+        printf("Nombre de tentative(s) : %d\n", compteur);
         printf("Trouvez le nombre mystere compris entre 1 et 100 : \n");
         scanf("%d", &nombreEntre);
         if(nombreMystere < nombreEntre)
@@ -21,8 +23,8 @@ int main()
             printf("C'est plus !\n");
         }else
         {
-            printf("Bravo tu as trouver !\n");
+            printf("Bravo tu as trouver, au bout de %d tentative(s) !\n", compteur);
         }
-
+        compteur++;
     }while(nombreMystere != nombreEntre);
 }
