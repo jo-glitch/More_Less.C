@@ -1,18 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-    // fct pour compter les nombres de coup qu'on initialise à 1 pour le 1er coup
-int comptCoup(int coup)
-{
-    coup = 1;
-    return coup;
-}
-    // fct qui va permettre de rejouer si on le souhaite
-int replay(int game)
-{
-    game = 1;
-    return game;
-}
+
 // fct qui permet le choix du menu
 int menuNiveau(int level)
 {
@@ -76,11 +65,11 @@ int main()
     // nombreMystere = (rand() % (Max - Min + 1)) - 1;
     // variable pour la fct comptCoup
 
-     int compteur = 0, plusUn =0;
+    int compteur = 0; //plusUn =0;
 
     // variable pour la fct replayer
-    int rejouer = 0, ouiNon = 0;
-    rejouer = replay(ouiNon);
+    int rejouer = 1; //ouiNon = 0;
+    // rejouer = replay(ouiNon);
 
     // variable pour la fonction menuNiveau
     int menu = 0, selection = 0;
@@ -94,7 +83,7 @@ int main()
 
         // a chaque nvelles parties un nouveaux chiffre aleatoire et choisi et le compteur retour a 1
         nombreMystere = (rand() % (Max - Min + 1)) - 1; // formule nb aleatoire
-        compteur = comptCoup(plusUn);
+        compteur = 1;//comptCoup(plusUn);
             // boucle du plus ou moins et du compteur
             do
             {
